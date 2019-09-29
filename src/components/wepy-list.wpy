@@ -1,9 +1,14 @@
 <style lang="less">
 .mylist:odd {
-  color: red;
+  .inner-div{
+    color: red;
+  }
+  
 }
 .mylist:even {
-  color: green;
+  .inner-div{
+    color: green;
+  }
 }
 </style>
 <template>
@@ -11,8 +16,8 @@
 		<div>
 			<button @tap="add" size="mini">添加列表another</button>
 		</div>
-		<div v-for="(item, index) in list" :key="index">
-			<div @tap="tap" class="mylist">
+		<div v-for="(item, index) in list" :key="index" class="mylist">
+			<div @tap="tapNow" class="inner-div">
 				<span>{{item.id}}</span>
 				: {{item.title}}
 				<span @tap="remove(index)">X</span>
@@ -43,9 +48,10 @@ wepy.component({
   },
 
   methods: {
-    tap() {
+    tapNow() {
       // this.num = this.num + 1
-      console.log(this.$name + ' tap');
+      // console.log(this.$name + ' tap');
+      console.log('tap');
     },
     add() {
       let len = this.list.length;

@@ -16,9 +16,9 @@
   "author": "Van-Yo <jokerwanr@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@wepy/x": "^2.0.2",
     "@wepy/core": "^2.0.0-alpha.9",
-    "miniprogram-slide-view": "0.0.3"
+    "@wepy/x": "^2.0.2",
+    "vant-weapp": "^1.0.0-beta.0"
   },
   "devDependencies": {
     "@wepy/cli": "^2.0.0-alpha.18",

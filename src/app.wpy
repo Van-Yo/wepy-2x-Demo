@@ -24,6 +24,10 @@ wepy.app({
 		'before-setData': function (dirty) {
 			console.log('setData dirty: ', dirty);
 			return dirty;
+		},
+		'before-event': function (data) {
+			console.log(`Its's a ${data.event.type} event, there are ${data.params.length} arguments`);
+			return data;
 		}
 	},
 	globalData: {
